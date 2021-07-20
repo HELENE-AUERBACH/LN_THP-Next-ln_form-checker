@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hacking Form Checker</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div id="input-form-content">
+      <form action="./success.html" novalidate>
+        <p>
+          <label for="lastname">
+            <span>Veuillez saisir un nom* :</span>
+            <input type="text" id="lastname" name="lastname" required>
+            <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+        <p>
+          <label for="firstname">
+            <span>Veuillez saisir un prénom* :</span>
+            <input type="text" minlength="3" id="firstname" name="firstname" required>
+            <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+        <p>
+          <label for="age">
+            <span>Veuillez saisir un âge* :</span>
+            <input type="number" min="19" step="1"pattern="\d+" id="age" name="age" required>
+            <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+        <p>
+          <label for="mail">
+            <span>Veuillez saisir une adresse e-mail* :</span>
+            <input type="email" id="mail" name="mail" required>
+            <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+        <p>
+          <label for="mail-confirmation">
+            <span>Veuillez resaisir l'adresse e-mail* :</span>
+            <input type="email" id="mail-confirmation" name="mail-confirmation" required>
+            <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+        <p>
+          <label for="pwd">
+            <span>Veuillez saisir un mot de passe* :</span>
+            <input type="password" minlength="6" id="pwd" name="pwd" required>
+            <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+        <p>
+          <label for="pwd-confirmation">
+            <span>Veuillez resaisir le mot de passe* :</span>
+            <input type="password" minlength="6" id="pwd-confirmation" name="pwd-confirmation" required>
+            <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+        <p>
+          <fieldset>
+            <legend>Acceptez-vous les CGU?* :</legend>
+	    <input type="radio" id="cgu-yes" name="cgu" value="Oui" required><label for="cgu-yes">Oui</label>
+	    <input type="radio" id="cgu-no" name="cgu" value="Non" required><label for="cgu-no">Non</label>
+            <span class="error" aria-live="polite"></span>
+	  </fieldset>
+	</p>
+        <button>Envoyer</button>
+      </form>
+    </div>
+    <script src="./formChecker.js"></script>
+  </body>
+</html> 
